@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>exercise-tracker</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <article>
+      <div class="container">
+        <div class="contents">
+          <header class="h1">Exercise tracker</header>
+        </div>
+        <div class="container-fluid">
+          <div class="row" style="margin-top:25px">
+            <div class="col-sm">
+              <div class="card container" style="padding:20px">
+                <header class="h5">Create a new user</header>
+                <br />
+                <span class="bg-info">POST /api/exercise/new-user</span>
+                <form>
+                  <div class="form-group">
+                    <label for="username">username</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      aria-describedby="username"
+                      placeholder="Enter username"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="card container" style="padding:20px">
+                <header class="h5">Add exercise</header>
+                <br />
+                <span class="bg-info">POST /api/exercise/add</span>
+                <form>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="userId"
+                      aria-describedby="userId"
+                      placeholder="userId *"
+                      style="margin-top:5px"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="description"
+                      aria-describedby="description"
+                      placeholder="description *"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="durations"
+                      aria-describedby="durations"
+                      placeholder="durations(mins)*"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      aria-describedby="date"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        GET users's exercise log: GET
+        /api/exercise/log?{userId}[&from][&to][&limit]
+        <br />
+        { } = required, [ ] = optional <br />
+        from, to = dates (yyyy-mm-dd); limit = number
+      </div>
+    </article>
+  </body>
+</html>
