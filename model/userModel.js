@@ -3,9 +3,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const User = new Schema({
-  userId: { required: true, type: String }
+  username: { required: true, type: String },
+  id: { require: true, type: String }
 });
 
-mongoose.model("User", User);
-
-exports.User = User;
+module.exports = mongoose.model("User", User);
