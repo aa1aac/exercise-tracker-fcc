@@ -70,6 +70,7 @@
                       aria-describedby="description"
                       placeholder="description *"
                       required
+                      name="description"
                     />
                   </div>
                   <div class="form-group">
@@ -80,6 +81,7 @@
                       aria-describedby="durations"
                       placeholder="durations(mins)*"
                       required
+                      name="durations"
                     />
                   </div>
                   <div class="form-group">
@@ -89,6 +91,7 @@
                       id="date"
                       aria-describedby="date"
                       required
+                      name="date"
                     />
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
@@ -98,7 +101,7 @@
           </div>
         </div>
         GET users's exercise log: GET
-        /api/exercise/log?{userId}[&from][&to][&limit]
+        /api/exercise/log?{userId=< userId >}[&from= < from >][&to= < to >][&limit= < limit>]
         <br />
         { } = required, [ ] = optional <br />
         from, to = dates (yyyy-mm-dd); limit = number
